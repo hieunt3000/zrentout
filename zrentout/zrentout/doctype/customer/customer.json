@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-19 14:29:43.923294",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer_name",
+  "column_break_jwow",
+  "customer_type",
+  "is_cutomer",
+  "is_provider",
+  "disabled",
+  "primary_contact_section",
+  "phone_1",
+  "column_break_ipiz",
+  "email",
+  "address_section",
+  "address_1",
+  "column_break_jdwe",
+  "address_2"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "No.",
+   "options": ".YYYY.-.###.",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jwow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type"
+  },
+  {
+   "fieldname": "primary_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "phone_1",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Mobile phone"
+  },
+  {
+   "fieldname": "column_break_ipiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_1",
+   "fieldtype": "Data",
+   "label": "Address 1"
+  },
+  {
+   "fieldname": "column_break_jdwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": " Disabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_cutomer",
+   "fieldtype": "Check",
+   "label": "Is cutomer"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_provider",
+   "fieldtype": "Check",
+   "label": "Is provider"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Rent Order",
+   "link_fieldname": "customer"
+  }
+ ],
+ "modified": "2025-04-21 14:38:59.641478",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Customer",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer_name"
+}

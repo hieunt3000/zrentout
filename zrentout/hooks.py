@@ -44,7 +44,8 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+#doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {"Rent Order" : "public/js/rent_order_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -242,3 +243,9 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+# doc_events = {
+# 	"Stock Entry": {
+# 		#"on_update_after_submit": "zrentout.zrentout.doctype.stock_entry.stock_entry.on_update_after_submit",
+# 	},
+# }

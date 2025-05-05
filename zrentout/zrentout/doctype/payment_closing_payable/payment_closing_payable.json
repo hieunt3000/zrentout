@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-21 00:27:53.080739",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "purchase_order",
+  "invoice_name",
+  "invoice_date",
+  "payable_amt",
+  "note"
+ ],
+ "fields": [
+  {
+   "fetch_from": "purchace_invoice.amount",
+   "fieldname": "payable_amt",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payable Amt"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Note"
+  },
+  {
+   "fetch_from": "purchace_invoice.purchase_name",
+   "fieldname": "invoice_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice name"
+  },
+  {
+   "fetch_from": "purchace_invoice.invoice_date",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice date"
+  },
+  {
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Purchase order",
+   "options": "Purchase Order",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-04 17:23:04.386395",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Payment Closing Payable",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

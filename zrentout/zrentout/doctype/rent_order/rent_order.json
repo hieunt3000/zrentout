@@ -1,0 +1,418 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-26 10:27:14.667990",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "naming_series",
+  "customer",
+  "customer_name",
+  "title",
+  "posting_date",
+  "column_break_kxra",
+  "expected_total_day",
+  "expected_out_date",
+  "expected_return_date",
+  "description",
+  "order_age",
+  "status",
+  "section_break_detail",
+  "column_break_qtun",
+  "order_template",
+  "column_break_sxkf",
+  "scan_barcode",
+  "section_break_qbgk",
+  "column_break_qjhx",
+  "order_item",
+  "grand_total_item",
+  "total_section",
+  "column_break_tuhp",
+  "service_item",
+  "grand_total_service",
+  "additional_discount_section",
+  "discount_pecentage",
+  "column_break_afnq",
+  "discount_amount",
+  "section_break_xunn",
+  "grand_total",
+  "column_break_ituf",
+  "grand_total_after_discount",
+  "section_break",
+  "tax_name",
+  "column_break_iabw",
+  "tax_rate",
+  "section_break_mrnk",
+  "tax_amount",
+  "column_break_wxaj",
+  "grand_total_after_tax",
+  "total_in_words",
+  "section_break_nmdg",
+  "workflow_state",
+  "leasing_tab",
+  "accumulate_amount",
+  "return_details_section",
+  "out_date",
+  "column_break_ftei",
+  "return_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SO-.YY.MM.DD.-.####"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only_depends_on": "eval:doc.status != \"Draft\"",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kxra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_out_date",
+   "fieldtype": "Date",
+   "label": "Expected out date",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "expected_return_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected return date"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "out_date",
+   "fieldtype": "Date",
+   "label": "Out Date"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "section_break_qbgk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "return_details_section",
+   "fieldtype": "Section Break",
+   "label": "Return Details"
+  },
+  {
+   "fieldname": "column_break_ftei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "scan_barcode",
+   "fieldtype": "Data",
+   "label": "Scan Barcode",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Order service"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "columns": 10,
+   "fieldname": "column_break_tuhp",
+   "fieldtype": "Column Break",
+   "width": "200"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "additional_discount_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Discount"
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_pecentage",
+   "fieldtype": "Percent",
+   "label": "Discount Pecentage"
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_afnq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nOn Hold\nReturned\nTo Bill\nTo Payment\nCompleted\nCancelled\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "leasing_tab",
+   "fieldtype": "Tab Break",
+   "label": "Others"
+  },
+  {
+   "fieldname": "total_in_words",
+   "fieldtype": "Data",
+   "label": "Total in words",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mrnk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wxaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_item",
+   "fieldtype": "Table",
+   "label": "Order Item",
+   "options": "Rent Order Item",
+   "read_only_depends_on": "eval:doc.status!=\"Draft\""
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Table",
+   "label": "Service Item",
+   "options": "Rent Order Service",
+   "read_only_depends_on": "eval:doc.status!=\"Draft\""
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total_item",
+   "fieldtype": "Currency",
+   "label": "Grand Total Item"
+  },
+  {
+   "fieldname": "section_break_xunn",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "column_break_ituf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "fieldname": "expected_total_day",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Expected total day",
+   "non_negative": 1,
+   "read_only_depends_on": "eval:doc.status!=\"Draft\"",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total_service",
+   "fieldtype": "Currency",
+   "label": "Grand Total Service"
+  },
+  {
+   "columns": 5,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order age",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qjhx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total_after_discount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Grand total after discount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_iabw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "tax_name.rate",
+   "fieldname": "tax_rate",
+   "fieldtype": "Float",
+   "label": "Tax rate",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break",
+   "fieldtype": "Section Break",
+   "label": "Taxes"
+  },
+  {
+   "fieldname": "grand_total_after_tax",
+   "fieldtype": "Currency",
+   "label": "Total amount (After taxes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Total tax"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "template.tax_name",
+   "fieldname": "tax_name",
+   "fieldtype": "Link",
+   "label": "Tax",
+   "options": "Tax Rates"
+  },
+  {
+   "fieldname": "section_break_detail",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_qtun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sxkf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_template",
+   "fieldtype": "Link",
+   "label": "Template",
+   "options": "Rent Order Temp"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "accumulate_amount",
+   "fieldtype": "Currency",
+   "label": "Accumulate amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nmdg",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Rent Return",
+   "link_fieldname": "rent_order"
+  },
+  {
+   "link_doctype": "Rent Invoice",
+   "link_fieldname": "rent_order"
+  }
+ ],
+ "modified": "2025-04-07 17:17:55.575868",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}

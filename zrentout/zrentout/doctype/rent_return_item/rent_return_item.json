@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-28 11:47:20.043173",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset",
+  "asset_name",
+  "order_qtty",
+  "return_qtty",
+  "damage_qtty",
+  "damage_price",
+  "damage_value",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Rent Asset"
+  },
+  {
+   "fieldname": "order_qtty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order Qtty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "return_qtty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Return Qtty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Note"
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "damage_qtty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Damage Qtty"
+  },
+  {
+   "fieldname": "damage_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Damage Price"
+  },
+  {
+   "fieldname": "damage_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Damage Value",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-28 16:45:17.599385",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Return Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

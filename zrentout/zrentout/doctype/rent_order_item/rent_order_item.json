@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-27 17:43:59.665049",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset",
+  "asset_name",
+  "available_qtty",
+  "price_list",
+  "rate",
+  "quantity",
+  "unit",
+  "rent_total",
+  "amount",
+  "note",
+  "reconciliation"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Rent Asset"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "price_list.rate",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Rate",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Note"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "price_list.uom",
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Rent UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Price List",
+   "options": "Rent Price"
+  },
+  {
+   "columns": 1,
+   "fieldname": "rent_total",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rent Total"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency"
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "asset.available_qtty",
+   "fieldname": "available_qtty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Available Qtty",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "True",
+   "fieldname": "reconciliation",
+   "fieldtype": "Check",
+   "label": "Reconciliation",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-30 20:27:48.696089",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Order Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

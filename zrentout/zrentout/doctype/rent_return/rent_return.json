@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:rent_order",
+ "creation": "2025-03-27 19:19:05.073406",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rent_order",
+  "rent_name",
+  "column_break_wvth",
+  "section_break_mqae",
+  "rent_item",
+  "section_break_rxzi",
+  "total_return",
+  "column_break_xboj",
+  "total_damage",
+  "column_break_vbsx",
+  "total_damage_value",
+  "section_break_dojc",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dojc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Return",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rent_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Rent Order",
+   "options": "Rent Order",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_wvth",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "rent_order.title",
+   "fieldname": "rent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rent Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mqae",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rent_item",
+   "fieldtype": "Table",
+   "label": "Rent Item",
+   "options": "Rent Return Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rxzi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_return",
+   "fieldtype": "Int",
+   "label": "Total Return",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xboj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_damage",
+   "fieldtype": "Int",
+   "label": "Total Damage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vbsx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_damage_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Damage Value",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-28 16:52:12.445889",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Return",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "rent_order"
+}

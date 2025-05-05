@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-04-07 17:54:37.248494",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "purchase_name",
+  "party",
+  "invoice_date",
+  "column_break_jozd",
+  "purchase_order",
+  "order_name",
+  "note",
+  "status",
+  "is_paid",
+  "items_section",
+  "purchase_item",
+  "grand_total_item",
+  "services_section",
+  "order_service",
+  "grand_total_service",
+  "section_break_pvvm",
+  "column_break_rgry",
+  "column_break_jpoz",
+  "total_amount",
+  "section_break_7uxc",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_7uxc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Purchase Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "No #.",
+   "options": ".YY.MM.DD.-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jozd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Purchase Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is paid"
+  },
+  {
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "label": "Purchase order",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fetch_from": "purchase_order.purchase_name",
+   "fieldname": "order_name",
+   "fieldtype": "Data",
+   "label": "Order Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "To stock"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "purchase_item",
+   "fieldtype": "Table",
+   "label": "Purchase item",
+   "options": "Purchase Order Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total_item",
+   "fieldtype": "Currency",
+   "label": "Grand total item",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "services_section",
+   "fieldtype": "Section Break",
+   "label": "Services"
+  },
+  {
+   "fieldname": "order_service",
+   "fieldtype": "Table",
+   "label": "Order service",
+   "options": "Purchase Order Service"
+  },
+  {
+   "default": "0",
+   "fieldname": "grand_total_service",
+   "fieldtype": "Currency",
+   "label": "Grand total service",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_pvvm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rgry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jpoz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Grand total"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-27 06:55:29.095446",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Purchase Invoice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

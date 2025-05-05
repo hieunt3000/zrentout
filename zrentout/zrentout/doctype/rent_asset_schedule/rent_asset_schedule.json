@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Re-{MM}-{YY}-{####}",
+ "creation": "2025-02-21 06:46:31.258945",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ritk",
+  "schedule_name",
+  "assest",
+  "asset_name",
+  "column_break_dvhm",
+  "from_date",
+  "to_date",
+  "status",
+  "note",
+  "section_break_hych",
+  "column_break_itmd",
+  "column_break_kssk",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ritk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assest",
+   "fieldtype": "Link",
+   "label": "Assest",
+   "options": "Rent Asset"
+  },
+  {
+   "fetch_from": "assest.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name"
+  },
+  {
+   "fieldname": "column_break_dvhm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "schedule_name",
+   "fieldtype": "Data",
+   "label": "Schedule Name"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "section_break_hych",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nDoing\nDone"
+  },
+  {
+   "fieldname": "column_break_kssk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Asset Schedule",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_itmd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-26 17:15:58.677876",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Asset Schedule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "schedule_name"
+}

@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-31 20:14:17.308452",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "rent_order",
+  "pay_amount",
+  "notes",
+  "column_break_klhr",
+  "rent_name",
+  "customer",
+  "total_amount",
+  "paid_amount",
+  "is_paid",
+  "invoice_date",
+  "section_break_sme1",
+  "payment_note",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sme1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "No #",
+   "options": ".YY.MM.DD.-"
+  },
+  {
+   "fieldname": "column_break_klhr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rent_order",
+   "fieldtype": "Link",
+   "label": "Rent Order",
+   "options": "Rent Order"
+  },
+  {
+   "fieldname": "pay_amount",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Pay amount",
+   "non_negative": 1
+  },
+  {
+   "fetch_from": "rent_order.grand_total_after_tax",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total amount"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Content"
+  },
+  {
+   "fetch_from": "rent_order.accumulate_amount",
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid amount"
+  },
+  {
+   "fetch_from": "rent_order.title",
+   "fieldname": "rent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rent name",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": " Is Paid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "rent_order.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice date"
+  },
+  {
+   "fieldname": "payment_note",
+   "fieldtype": "Data",
+   "label": "Payment note",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-04 16:42:31.516593",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Invoice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

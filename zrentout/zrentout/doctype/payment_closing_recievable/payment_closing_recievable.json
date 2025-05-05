@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-21 00:34:04.973629",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rent_invoice",
+  "invoice_name",
+  "invoice_date",
+  "recievable_amt",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "rent_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Rent invoice",
+   "options": "Rent Invoice",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "rent_invoice.pay_amount",
+   "fieldname": "recievable_amt",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Recievable amt",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "rent_invoice.rent_name",
+   "fieldname": "invoice_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice Name"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Note"
+  },
+  {
+   "fetch_from": "rent_invoice.invoice_date",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-23 17:21:23.779955",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Payment Closing Recievable",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

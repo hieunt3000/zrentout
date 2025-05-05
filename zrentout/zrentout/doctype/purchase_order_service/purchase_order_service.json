@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-24 07:33:50.100914",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sevice",
+  "service_name",
+  "price",
+  "quantity",
+  "unit",
+  "tax",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "sevice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sevice",
+   "options": "Rent Service",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sevice.service_name",
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit"
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Tax"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-24 07:57:52.716667",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Purchase Order Service",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-25 10:05:42.039090",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "core_information_section",
+  "naming_series",
+  "asset_name",
+  "group",
+  "photo",
+  "column_break_xbco",
+  "location",
+  "maintain_stock",
+  "disabled",
+  "rating",
+  "descriptions_section",
+  "description",
+  "other_details_section",
+  "expected_available_date",
+  "cost_price",
+  "status",
+  "column_break_goed",
+  "amended_from",
+  "tax_tab",
+  "available_qtty",
+  "order_qtty",
+  "lock_qtty",
+  "stock_qtty",
+  "column_break_wfxl",
+  "basic_price",
+  "pricing_tab",
+  "usage",
+  "availale_for_sale",
+  "column_break_neqr",
+  "rent_collected"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_xbco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "No #",
+   "options": "ASS-.YYYY.-"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Rent Location"
+  },
+  {
+   "fieldname": "core_information_section",
+   "fieldtype": "Section Break",
+   "label": "Core Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Asset",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nRented\nMaintenance\nScrapped"
+  },
+  {
+   "fetch_from": "purchase_invoice_item.amount",
+   "fieldname": "cost_price",
+   "fieldtype": "Int",
+   "label": "Cost Price"
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Link",
+   "label": "Group",
+   "options": "Rent Asset Group"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "descriptions_section",
+   "fieldtype": "Section Break",
+   "label": "Descriptions"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fetch_from": "item.image",
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo",
+   "options": "image"
+  },
+  {
+   "fieldname": "pricing_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pricing"
+  },
+  {
+   "default": "0",
+   "fieldname": "availale_for_sale",
+   "fieldtype": "Check",
+   "label": "Availale for sale"
+  },
+  {
+   "fieldname": "column_break_neqr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rent_collected",
+   "fieldtype": "Int",
+   "label": "Rent Collected"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details "
+  },
+  {
+   "fieldname": "tax_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stock"
+  },
+  {
+   "fieldname": "expected_available_date",
+   "fieldtype": "Data",
+   "label": "Expected Available Date"
+  },
+  {
+   "fieldname": "column_break_goed",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "usage",
+   "fieldtype": "Percent",
+   "label": "Usage"
+  },
+  {
+   "default": "0",
+   "fieldname": "maintain_stock",
+   "fieldtype": "Check",
+   "label": "Maintain Stock"
+  },
+  {
+   "default": "0",
+   "fieldname": "stock_qtty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Stock Qtty"
+  },
+  {
+   "default": "0",
+   "fieldname": "available_qtty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Available Qtty"
+  },
+  {
+   "fieldname": "column_break_wfxl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "order_qtty",
+   "fieldtype": "Int",
+   "label": "Order Qtty"
+  },
+  {
+   "default": "0",
+   "fieldname": "lock_qtty",
+   "fieldtype": "Int",
+   "label": "Lock Qtty"
+  },
+  {
+   "fieldname": "basic_price",
+   "fieldtype": "Currency",
+   "label": "Basic Price"
+  }
+ ],
+ "image_field": "photo",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Rent Price",
+   "link_fieldname": "asset"
+  },
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "asset"
+  }
+ ],
+ "modified": "2025-04-01 10:54:45.277516",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Rent Asset",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "asset_name"
+}

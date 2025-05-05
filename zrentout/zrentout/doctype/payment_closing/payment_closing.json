@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-04-07 18:07:02.018705",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_gqph",
+  "naming_series",
+  "customer",
+  "customer_name",
+  "column_break_aatb",
+  "closing_date",
+  "section_break_uyny",
+  "recievable_invoice",
+  "section_break_qozf",
+  "column_break_fgqi",
+  "column_break_iclv",
+  "total_recievable",
+  "section_break_waja",
+  "payable_invoice",
+  "section_break_xzsv",
+  "column_break_nwhw",
+  "column_break_iglt",
+  "total_payable",
+  "total_balance",
+  "section_break_qe2x",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qe2x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Closing",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_gqph",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "No #.",
+   "options": ".YY.MM.-.###."
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_aatb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "closing_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Closing Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uyny",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recievable_invoice",
+   "fieldtype": "Table",
+   "label": "Recievable invoice",
+   "options": "Payment Closing Recievable"
+  },
+  {
+   "fieldname": "payable_invoice",
+   "fieldtype": "Table",
+   "label": "Payable invoice",
+   "options": "Payment Closing Payable"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_recievable",
+   "fieldtype": "Currency",
+   "label": "Total recievable"
+  },
+  {
+   "fieldname": "section_break_qozf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_waja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fgqi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iclv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xzsv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nwhw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iglt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_payable",
+   "fieldtype": "Currency",
+   "label": "Total payable",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total balance",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-04 17:23:25.598788",
+ "modified_by": "Administrator",
+ "module": "Zrentout",
+ "name": "Payment Closing",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
