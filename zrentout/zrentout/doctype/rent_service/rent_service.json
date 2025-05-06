@@ -11,7 +11,11 @@
   "rate",
   "column_break_xnys",
   "disabled",
-  "notes"
+  "notes",
+  "section_break_nxuu",
+  "unit",
+  "column_break_jtdy",
+  "tax"
  ],
  "fields": [
   {
@@ -50,12 +54,31 @@
    "fieldtype": "Select",
    "label": "Service No",
    "options": "S-.###."
+  },
+  {
+   "fieldname": "section_break_nxuu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "column_break_jtdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "10",
+   "fieldname": "tax",
+   "fieldtype": "Int",
+   "label": "Tax (%)"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-21 21:18:36.575783",
+ "modified": "2025-05-06 08:06:53.560939",
  "modified_by": "Administrator",
  "module": "Zrentout",
  "name": "Rent Service",
